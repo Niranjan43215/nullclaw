@@ -1,0 +1,39 @@
+{
+  "models": {
+    "providers": {
+      "groq": {
+        "api_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "groq/llama-3.3-70b-versatile"
+      }
+    }
+  },
+  "memory": {
+    "backend": "sqlite",
+    "auto_save": true
+  },
+  "channels": {
+    "telegram": {
+      "accounts": {
+        "default": {
+          "bot_token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "allow_from": ["*"],
+          "reply_in_private": true
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 3000,
+    "require_pairing": true,
+    "allow_public_bind": false
+  },
+  "tunnel": {
+    "provider": "cloudflare"
+  }
+}
